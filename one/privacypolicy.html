@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4ED;
+    --paper-raised:#FBF9F4;
+    --ink:#1B1D1B;
+    --muted:#6B6F68;
+    --accent:#3F6657;
+    --accent-soft:#E4ECE7;
+    --hairline:#DCD7C7;
+    --mono-bg:#EFEAE0;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html,body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:700px;
+    margin:0 auto;
+    padding:72px 28px 120px;
+  }
+
+  .masthead{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:24px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--hairline);
+    margin-bottom:40px;
+    opacity:0;
+    animation:rise .6s ease-out forwards;
+  }
+
+  .masthead .name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:42px;
+    letter-spacing:-0.01em;
+    line-height:1;
+  }
+
+  .masthead .name span{ color:var(--accent); }
+
+  .masthead .tag{
+    margin-top:8px;
+    color:var(--muted);
+    font-size:15px;
+  }
+
+  .meta{
+    text-align:right;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--muted);
+    line-height:1.8;
+    white-space:nowrap;
+    padding-top:8px;
+  }
+
+  .meta .v{
+    display:inline-block;
+    background:var(--mono-bg);
+    color:var(--ink);
+    padding:2px 7px;
+    border-radius:3px;
+    margin-left:6px;
+  }
+
+  .intro{
+    font-size:17px;
+    line-height:1.7;
+    color:var(--ink);
+    margin-bottom:8px;
+    opacity:0;
+    animation:rise .6s ease-out .05s forwards;
+  }
+
+  .toc{
+    margin:36px 0 56px;
+    border:1px solid var(--hairline);
+    background:var(--paper-raised);
+    border-radius:10px;
+    padding:22px 26px;
+    opacity:0;
+    animation:rise .6s ease-out .1s forwards;
+  }
+
+  .toc-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:12px;
+  }
+
+  .toc ol{
+    margin:0;
+    padding:0;
+    list-style:none;
+    columns:2;
+    column-gap:24px;
+  }
+
+  .toc li{ margin-bottom:9px; break-inside:avoid; }
+
+  .toc a{
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14.5px;
+    border-bottom:1px solid transparent;
+    transition:border-color .15s, color .15s;
+  }
+
+  .toc a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  .toc .n{
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--muted);
+    margin-right:8px;
+    font-size:12.5px;
+  }
+
+  section{
+    margin-bottom:46px;
+    padding-top:6px;
+  }
+
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:14px;
+  }
+
+  .sec-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:3px 8px;
+    border-radius:4px;
+    flex-shrink:0;
+  }
+
+  h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:23px;
+    margin:0;
+    letter-spacing:-0.005em;
+  }
+
+  p{
+    font-size:15.5px;
+    line-height:1.75;
+    margin:0 0 14px;
+    color:#2B2D2A;
+  }
+
+  ul{
+    margin:0 0 14px;
+    padding-left:0;
+    list-style:none;
+  }
+
+  li.item{
+    font-size:15.5px;
+    line-height:1.7;
+    margin-bottom:10px;
+    padding-left:20px;
+    position:relative;
+    color:#2B2D2A;
+  }
+
+  li.item::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--accent);
+  }
+
+  .field{ color:var(--ink); font-weight:600; }
+
+  .callout{
+    border-left:3px solid var(--accent);
+    background:var(--accent-soft);
+    padding:14px 18px;
+    border-radius:0 8px 8px 0;
+    font-size:14.5px;
+    line-height:1.65;
+    color:#23362E;
+    margin:18px 0;
+  }
+
+  .ph{
+    font-family:'IBM Plex Mono',monospace;
+    background:#FCEFE3;
+    color:#8A4B1E;
+    padding:1px 6px;
+    border-radius:3px;
+    font-size:13.5px;
+  }
+
+  hr.div{
+    border:none;
+    border-top:1px solid var(--hairline);
+    margin:46px 0;
+  }
+
+  footer{
+    margin-top:60px;
+    padding-top:24px;
+    border-top:1px solid var(--hairline);
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.8;
+  }
+
+  footer a{ color:var(--accent); text-decoration:none; }
+  footer a:hover{ text-decoration:underline; }
+
+  @keyframes rise{
+    from{ opacity:0; transform:translateY(8px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  section{ opacity:0; animation:rise .5s ease-out forwards; }
+  section:nth-of-type(1){ animation-delay:.02s; }
+  section:nth-of-type(2){ animation-delay:.04s; }
+  section:nth-of-type(3){ animation-delay:.06s; }
+  section:nth-of-type(4){ animation-delay:.08s; }
+  section:nth-of-type(5){ animation-delay:.10s; }
+  section:nth-of-type(6){ animation-delay:.12s; }
+  section:nth-of-type(7){ animation-delay:.14s; }
+  section:nth-of-type(8){ animation-delay:.16s; }
+  section:nth-of-type(9){ animation-delay:.18s; }
+  section:nth-of-type(10){ animation-delay:.20s; }
+
+  @media (max-width:560px){
+    .wrap{ padding:48px 18px 90px; }
+    .masthead{ flex-direction:column; }
+    .meta{ text-align:left; }
+    .toc ol{ columns:1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div>
+      <div class="name">One<span>.</span></div>
+      <div class="tag">Privacy Policy — Discord Application</div>
+    </div>
+    <div class="meta">
+      EFFECTIVE <span class="v">18 JUN 2026</span><br>
+      VERSION <span class="v">1.0</span>
+    </div>
+  </div>
+
+  <p class="intro">This policy explains what data the Discord application "One" (referred to here as "the bot") collects, how it's used, and how long it's kept. It applies to every server the bot is added to.</p>
+
+  <div class="toc">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><span class="n">01</span><a href="#overview">Overview</a></li>
+      <li><span class="n">02</span><a href="#collect">Information we collect</a></li>
+      <li><span class="n">03</span><a href="#store">What gets stored, and where</a></li>
+      <li><span class="n">04</span><a href="#presence">Status &amp; activity data</a></li>
+      <li><span class="n">05</span><a href="#content">Message content</a></li>
+      <li><span class="n">06</span><a href="#use">How information is used</a></li>
+      <li><span class="n">07</span><a href="#retention">Retention &amp; deletion</a></li>
+      <li><span class="n">08</span><a href="#sharing">Third parties &amp; AI training</a></li>
+      <li><span class="n">09</span><a href="#children">Children's privacy</a></li>
+      <li><span class="n">10</span><a href="#changes">Changes to this policy</a></li>
+    </ol>
+  </div>
+
+  <section id="overview">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Overview</h2></div>
+    <p>One is a general-purpose Discord bot offering server information commands, moderation tools, light utility features, and a voice-channel music player. It operates entirely through Discord's slash commands and only acts within servers it has been added to.</p>
+  </section>
+
+  <section id="collect">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Information we collect</h2></div>
+    <p>The bot receives the following from Discord in the normal course of operating:</p>
+    <li class="item"><span class="field">Identifiers</span> — your Discord user ID, username, and server (guild) ID, needed to run commands and address responses correctly.</li>
+    <li class="item"><span class="field">Server data</span> — role, channel, and membership information made available by Discord, used to display info commands and enforce permission checks.</li>
+    <li class="item"><span class="field">Command input</span> — text you voluntarily provide to a command, such as an AFK reason, or a reason a moderator enters when issuing a warning or ban.</li>
+    <li class="item"><span class="field">Status &amp; activity</span> — your current Discord status and activity, only when another member looks it up (see §04).</li>
+  </section>
+
+  <section id="store">
+    <div class="sec-head"><span class="sec-num">03</span><h2>What gets stored, and where</h2></div>
+    <p>Most information the bot touches is used live and immediately discarded — for example, the data shown by <code>/serverinfo</code> or <code>/userinfo</code> is never saved anywhere. The bot does persist a small set of moderation records to a local data file on the server that runs the bot (not on Discord's own infrastructure):</p>
+    <li class="item">Warning records: user ID, reason, issuing moderator, and timestamp.</li>
+    <li class="item">Temporary ban records: user ID, reason, and scheduled unban time.</li>
+    <li class="item">A server's configured moderation log channel ID, if one has been set.</li>
+    <div class="callout">This data is not shared, sold, or transmitted to any third party. It exists solely so moderators in your server can track warning and ban history, and is only ever accessible to that server's moderators through the bot's own commands.</div>
+  </section>
+
+  <section id="presence">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Status &amp; activity data</h2></div>
+    <p>Commands like <code>/activity</code> and <code>/userinfo</code> display a member's current Discord status and what they're doing (for example, a game or Spotify track) at the moment the command is run. This information is rendered directly into the response and is never written to a file or database.</p>
+    <p>Any member able to use these commands can currently look up another member's live status. There is no per-user opt-out at this time; if you'd prefer your activity not be visible this way, you can adjust your own Discord status visibility settings, or ask a server's administrators to restrict access to these commands.</p>
+  </section>
+
+  <section id="content">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Message content</h2></div>
+    <p>The bot does not read, log, filter, or act on the content of ordinary messages sent by server members. No feature in the bot processes message text for regular users.</p>
+    <p>A separate, owner-only diagnostic tool is used for maintenance — it lets the bot's developer run debugging commands while the bot is live. This is restricted to the registered bot owner account and is not exposed to, or triggered by, other members' messages.</p>
+  </section>
+
+  <section id="use">
+    <div class="sec-head"><span class="sec-num">06</span><h2>How information is used</h2></div>
+    <p>Information is used only to operate the bot's commands and moderation features as described above — there is no advertising, profiling, or analytics use of any data the bot handles.</p>
+  </section>
+
+  <section id="retention">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Retention &amp; deletion</h2></div>
+    <p>Warning and temporary-ban records are kept until a server's moderators remove them using the bot's own commands, or until the bot is removed from that server. To request removal of records concerning you, contact a moderator in the relevant server, or reach out using the details below.</p>
+  </section>
+
+  <section id="sharing">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Third parties &amp; AI training</h2></div>
+    <p>No data the bot collects is sold, shared with advertisers, or transferred to third parties. None of it is used to train machine learning or AI models.</p>
+  </section>
+
+  <section id="children">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Children's privacy</h2></div>
+    <p>Discord requires users to be at least 13 years old (or the minimum age in their region). The bot does not knowingly collect information beyond what Discord itself provides for any user, and does not target or market to children.</p>
+  </section>
+
+  <section id="changes">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Changes to this policy</h2></div>
+    <p>This policy may be updated as the bot's features change. The effective date at the top of this page will be revised whenever that happens. Continued use of the bot after a change constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <hr class="div">
+
+  <footer>
+    Questions about this policy or your data? Contact <span class="ph">https://onceyt.github.io/links/mail</span>.<br>
+  </footer>
+
+</div>
+</body>
+</html>
