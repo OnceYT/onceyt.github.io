@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One — Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4ED;
+    --paper-raised:#FBF9F4;
+    --ink:#1B1D1B;
+    --muted:#6B6F68;
+    --accent:#3F6657;
+    --accent-soft:#E4ECE7;
+    --hairline:#DCD7C7;
+    --mono-bg:#EFEAE0;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html,body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:700px;
+    margin:0 auto;
+    padding:72px 28px 120px;
+  }
+
+  .masthead{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:24px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--hairline);
+    margin-bottom:40px;
+    opacity:0;
+    animation:rise .6s ease-out forwards;
+  }
+
+  .masthead .name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:42px;
+    letter-spacing:-0.01em;
+    line-height:1;
+  }
+
+  .masthead .name span{ color:var(--accent); }
+
+  .masthead .tag{
+    margin-top:8px;
+    color:var(--muted);
+    font-size:15px;
+  }
+
+  .meta{
+    text-align:right;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--muted);
+    line-height:1.8;
+    white-space:nowrap;
+    padding-top:8px;
+  }
+
+  .meta .v{
+    display:inline-block;
+    background:var(--mono-bg);
+    color:var(--ink);
+    padding:2px 7px;
+    border-radius:3px;
+    margin-left:6px;
+  }
+
+  .intro{
+    font-size:17px;
+    line-height:1.7;
+    color:var(--ink);
+    margin-bottom:8px;
+    opacity:0;
+    animation:rise .6s ease-out .05s forwards;
+  }
+
+  .toc{
+    margin:36px 0 56px;
+    border:1px solid var(--hairline);
+    background:var(--paper-raised);
+    border-radius:10px;
+    padding:22px 26px;
+    opacity:0;
+    animation:rise .6s ease-out .1s forwards;
+  }
+
+  .toc-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:12px;
+  }
+
+  .toc ol{
+    margin:0;
+    padding:0;
+    list-style:none;
+    columns:2;
+    column-gap:24px;
+  }
+
+  .toc li{ margin-bottom:9px; break-inside:avoid; }
+
+  .toc a{
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14.5px;
+    border-bottom:1px solid transparent;
+    transition:border-color .15s, color .15s;
+  }
+
+  .toc a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  .toc .n{
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--muted);
+    margin-right:8px;
+    font-size:12.5px;
+  }
+
+  section{
+    margin-bottom:46px;
+    padding-top:6px;
+  }
+
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:14px;
+  }
+
+  .sec-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:3px 8px;
+    border-radius:4px;
+    flex-shrink:0;
+  }
+
+  h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:23px;
+    margin:0;
+    letter-spacing:-0.005em;
+  }
+
+  p{
+    font-size:15.5px;
+    line-height:1.75;
+    margin:0 0 14px;
+    color:#2B2D2A;
+  }
+
+  ul{
+    margin:0 0 14px;
+    padding-left:0;
+    list-style:none;
+  }
+
+  li.item{
+    font-size:15.5px;
+    line-height:1.7;
+    margin-bottom:10px;
+    padding-left:20px;
+    position:relative;
+    color:#2B2D2A;
+  }
+
+  li.item::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--accent);
+  }
+
+  .field{ color:var(--ink); font-weight:600; }
+
+  .callout{
+    border-left:3px solid var(--accent);
+    background:var(--accent-soft);
+    padding:14px 18px;
+    border-radius:0 8px 8px 0;
+    font-size:14.5px;
+    line-height:1.65;
+    color:#23362E;
+    margin:18px 0;
+  }
+
+  .ph{
+    font-family:'IBM Plex Mono',monospace;
+    background:#FCEFE3;
+    color:#8A4B1E;
+    padding:1px 6px;
+    border-radius:3px;
+    font-size:13.5px;
+  }
+
+  hr.div{
+    border:none;
+    border-top:1px solid var(--hairline);
+    margin:46px 0;
+  }
+
+  footer{
+    margin-top:60px;
+    padding-top:24px;
+    border-top:1px solid var(--hairline);
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.8;
+  }
+
+  footer a{ color:var(--accent); text-decoration:none; }
+  footer a:hover{ text-decoration:underline; }
+
+  @keyframes rise{
+    from{ opacity:0; transform:translateY(8px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  section{ opacity:0; animation:rise .5s ease-out forwards; }
+  section:nth-of-type(1){ animation-delay:.02s; }
+  section:nth-of-type(2){ animation-delay:.04s; }
+  section:nth-of-type(3){ animation-delay:.06s; }
+  section:nth-of-type(4){ animation-delay:.08s; }
+  section:nth-of-type(5){ animation-delay:.10s; }
+  section:nth-of-type(6){ animation-delay:.12s; }
+  section:nth-of-type(7){ animation-delay:.14s; }
+  section:nth-of-type(8){ animation-delay:.16s; }
+  section:nth-of-type(9){ animation-delay:.18s; }
+  section:nth-of-type(10){ animation-delay:.20s; }
+  section:nth-of-type(11){ animation-delay:.22s; }
+
+  @media (max-width:560px){
+    .wrap{ padding:48px 18px 90px; }
+    .masthead{ flex-direction:column; }
+    .meta{ text-align:left; }
+    .toc ol{ columns:1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div>
+      <div class="name">One<span>.</span></div>
+      <div class="tag">Terms of Service — Discord Application</div>
+    </div>
+    <div class="meta">
+      EFFECTIVE <span class="v">18 JUN 2026</span><br>
+      VERSION <span class="v">1.0</span>
+    </div>
+  </div>
+
+  <p class="intro">These terms govern your use of the Discord application "One" (referred to here as "the bot"). By adding the bot to a server, or by using its commands, you agree to the terms below.</p>
+
+  <div class="toc">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><span class="n">01</span><a href="#acceptance">Acceptance of terms</a></li>
+      <li><span class="n">02</span><a href="#eligibility">Eligibility</a></li>
+      <li><span class="n">03</span><a href="#service">The service</a></li>
+      <li><span class="n">04</span><a href="#conduct">Acceptable use</a></li>
+      <li><span class="n">05</span><a href="#admins">Server administrator responsibilities</a></li>
+      <li><span class="n">06</span><a href="#availability">Availability &amp; changes to the bot</a></li>
+      <li><span class="n">07</span><a href="#ip">Intellectual property</a></li>
+      <li><span class="n">08</span><a href="#disclaimer">Disclaimer of warranties</a></li>
+      <li><span class="n">09</span><a href="#liability">Limitation of liability</a></li>
+      <li><span class="n">10</span><a href="#termination">Termination</a></li>
+      <li><span class="n">11</span><a href="#changes">Changes to these terms</a></li>
+    </ol>
+  </div>
+
+  <section id="acceptance">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Acceptance of terms</h2></div>
+    <p>By inviting the bot to a Discord server, or by interacting with any of its commands, you agree to be bound by these terms. If you don't agree, don't add or use the bot. Server administrators are responsible for making sure their members are aware of these terms where relevant.</p>
+  </section>
+
+  <section id="eligibility">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Eligibility</h2></div>
+    <p>Use of the bot requires a Discord account in good standing, and is subject to <span class="field">Discord's own Terms of Service</span> and minimum age requirements at all times. Nothing here overrides or replaces Discord's terms — where the two conflict, Discord's terms govern your use of the platform itself.</p>
+  </section>
+
+  <section id="service">
+    <div class="sec-head"><span class="sec-num">03</span><h2>The service</h2></div>
+    <p>The bot provides slash commands across four areas:</p>
+    <li class="item"><span class="field">General</span> — server and user information lookups (e.g. <code>/serverinfo</code>, <code>/userinfo</code>, <code>/botinfo</code>).</li>
+    <li class="item"><span class="field">Moderation</span> — tools for authorized server staff, including kicks, bans, timeouts, warnings, and message purges.</li>
+    <li class="item"><span class="field">Utility</span> — convenience features such as AFK status and activity lookups.</li>
+    <li class="item"><span class="field">Music</span> — voice-channel playback, queueing, and related controls.</li>
+    <p>Features may be added, changed, or removed at any time without prior notice.</p>
+  </section>
+
+  <section id="conduct">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Acceptable use</h2></div>
+    <p>You agree not to:</p>
+    <li class="item">Use the bot to harass, abuse, or impersonate other users.</li>
+    <li class="item">Attempt to exploit, reverse-engineer, or interfere with the bot's normal operation, including spamming commands or attempting to bypass cooldowns and permission checks.</li>
+    <li class="item">Use moderation commands you've been granted access to in a way that violates Discord's Terms of Service or Community Guidelines.</li>
+    <li class="item">Use the bot for any unlawful purpose, or in a way that infringes the rights of others.</li>
+    <p>Violating these terms may result in the bot refusing to respond to you, being removed from a server at the operator's discretion, or both.</p>
+  </section>
+
+  <section id="admins">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Server administrator responsibilities</h2></div>
+    <p>Moderation commands (kicks, bans, timeouts, warnings, and similar) only run when invoked by members a server's own administrators have granted the relevant Discord permissions to. The bot carries out the action it's told to — it does not independently decide who should be moderated.</p>
+    <div class="callout">Server owners and administrators are responsible for who they grant moderation-capable roles to, and for how those members use the bot's moderation commands within their server.</div>
+  </section>
+
+  <section id="availability">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Availability &amp; changes to the bot</h2></div>
+    <p>The bot is provided on an "as available" basis. Uptime, response times, and voice/music playback quality are not guaranteed and may be affected by maintenance, Discord's own infrastructure, or factors outside the bot operator's control. The bot operator may suspend, restrict, or discontinue the service, in whole or in part, at any time.</p>
+  </section>
+
+  <section id="ip">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Intellectual property</h2></div>
+    <p>The bot's name, code, and original content remain the property of its developer. This application is not affiliated with, endorsed by, or sponsored by Discord Inc. "Discord" and related marks belong to their respective owner.</p>
+  </section>
+
+  <section id="disclaimer">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Disclaimer of warranties</h2></div>
+    <p>The bot is provided "as is" and "as available," without warranties of any kind, express or implied, including fitness for a particular purpose, accuracy of information displayed, or uninterrupted operation.</p>
+  </section>
+
+  <section id="liability">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Limitation of liability</h2></div>
+    <p>To the fullest extent permitted by law, the bot's developer is not liable for any indirect, incidental, or consequential damages arising from your use of the bot, including moderation actions taken by your server's own staff, lost messages, or service interruptions.</p>
+  </section>
+
+  <section id="termination">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Termination</h2></div>
+    <p>A server's administrators may remove the bot at any time. The bot's operator may also restrict access to specific users or servers found to be violating these terms or Discord's policies, without prior notice.</p>
+  </section>
+
+  <section id="changes">
+    <div class="sec-head"><span class="sec-num">11</span><h2>Changes to these terms</h2></div>
+    <p>These terms may be updated as the bot evolves. The effective date at the top of this page will be revised whenever that happens. Continuing to use the bot after a change takes effect means you accept the revised terms.</p>
+  </section>
+
+  <hr class="div">
+
+  <footer>
+    Questions about these terms? Contact <span class="ph">https://onceyt.github.io/links/mail</span>.<br>
+    See also the <span class="ph">https://onceyt.github.io/one/privacypolicy</span>.
+  </footer>
+
+</div>
+</body>
+</html>
